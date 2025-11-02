@@ -4,6 +4,7 @@ import { Code2 } from "lucide-react";
 const skills = [
   { name: "HTML", icon: "🌐" },
   { name: "CSS", icon: "🎨" },
+  { name: "JavaScript", icon: "⚡" },
   { name: "Java", icon: "☕" },
   { name: "Python", icon: "🐍" },
 ];
@@ -19,14 +20,17 @@ export const Skills = () => {
           Technologies and programming languages I work with
         </p>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {skills.map((skill, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-all hover:scale-105 cursor-pointer"
+              className="hover:shadow-lg transition-all hover:scale-105 cursor-pointer animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="pt-6 text-center">
-                <div className="text-5xl mb-4">{skill.icon}</div>
+                <div className="text-5xl mb-4 transition-transform hover:scale-125 duration-300">
+                  {skill.icon}
+                </div>
                 <h3 className="text-lg font-semibold">{skill.name}</h3>
               </CardContent>
             </Card>
