@@ -7,6 +7,7 @@ const skills = [
   { name: "JavaScript", icon: "⚡" },
   { name: "Java", icon: "☕" },
   { name: "Python", icon: "🐍" },
+  { name: "SQL", icon: "🗄️" },
 ];
 
 export const Skills = () => {
@@ -20,7 +21,7 @@ export const Skills = () => {
           Technologies and programming languages I work with
         </p>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {skills.map((skill, index) => (
             <Card
               key={index}
