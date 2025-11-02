@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
-import profileImage from "@/assets/aryan-profile.jpg";
+import profileImage from "@/assets/aryan-pro.png";
 export const Hero = () => {
   return <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
       {/* Animated background gradient */}
