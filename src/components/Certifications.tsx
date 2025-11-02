@@ -51,12 +51,15 @@ const certifications = [
 
 export const Certifications = () => {
   return (
-    <section id="certifications" className="py-20 px-4 bg-secondary/30">
-      <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="text-primary">Certifications</span>
+    <section id="certifications" className="py-20 px-4 bg-secondary/30 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-10 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+      
+      <div className="container mx-auto relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 animate-fade-in">
+          <span className="text-primary bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Certifications</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
           Professional certifications and achievements
         </p>
 
@@ -64,21 +67,22 @@ export const Certifications = () => {
           {certifications.map((cert, index) => (
             <Card
               key={index}
-              className="hover:shadow-lg transition-all hover:scale-[1.02] flex flex-col"
+              className="hover:shadow-2xl transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 flex flex-col animate-fade-in group border-2 hover:border-primary/50"
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <CardContent className="pt-6 flex-1">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Award className="h-5 w-5 text-primary" />
+                  <div className="p-2 bg-primary/10 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                    <Award className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-lg font-semibold flex-1">{cert.title}</h3>
+                  <h3 className="text-lg font-semibold flex-1 group-hover:text-primary transition-colors duration-300">{cert.title}</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
                   {cert.description}
                 </p>
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full">
+                    <Button variant="outline" className="w-full hover:scale-105 transition-all duration-300 hover:shadow-lg hover:border-primary">
                       View Certificate
                     </Button>
                   </DialogTrigger>
