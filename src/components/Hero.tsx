@@ -20,7 +20,7 @@ export const Hero = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl animate-fade-in" style={{ animationDelay: '0.4s' }}>Passionate about creating innovative digital solutions and building seamless web experiences.</p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <Button size="lg" className="group hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50" asChild>
-                <a href="/aryan_cv.pdf" download="aryan_cv.pdf">
+                <a href="/Aryan_Resume.pdf" download="Aryan_Resume.pdf">
                   <Download className="mr-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
                   Download Resume
                 </a>
