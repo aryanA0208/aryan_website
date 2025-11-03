@@ -48,11 +48,25 @@ export const Hero = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center animate-scale-in" style={{ animationDelay: '0.3s' }}>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '3s' }}></div>
-              <div className="relative hover:scale-105 transition-transform duration-500">
-                <img src={profileImage} alt="Aryan Pratap Singh" className="relative w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-primary shadow-2xl ring-4 ring-primary/20 hover:ring-primary/40 transition-all duration-500" />
+            <div className="relative w-80 h-80 md:w-[450px] md:h-[450px]">
+              {/* Animated glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/20 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '3s' }}></div>
+              
+              {/* Image container with enhanced styling */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl ring-8 ring-primary/10 hover:ring-primary/30 hover:scale-[1.02] transition-all duration-500 backdrop-blur-sm">
+                <img 
+                  src={profileImage} 
+                  alt="Aryan Pratap Singh - Full Stack Developer" 
+                  className="w-full h-full object-cover object-center transform hover:scale-110 transition-transform duration-700" 
+                  loading="eager"
+                />
+                {/* Gradient overlay for better contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none"></div>
               </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-bounce-subtle"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '4s' }}></div>
             </div>
           </div>
         </div>
