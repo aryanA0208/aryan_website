@@ -10,315 +10,226 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Calibri', 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #000;
-            max-width: 8.5in;
+            font-family: Georgia, serif;
+            line-height: 1.4;
+            padding: 15px;
+            max-width: 210mm;
             margin: 0 auto;
-            padding: 0.5in;
-            background: #fff;
+            background: white;
         }
-        
+
         @media print {
             body {
-                margin: 0;
-                padding: 0.5in;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
             }
         }
-        
-        /* Header */
+
         .header {
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #000;
-            padding-bottom: 15px;
-        }
-        
-        .header h1 {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        
-        .header .contact-info {
-            font-size: 11px;
-            line-height: 1.4;
-        }
-        
-        /* Section Headings */
-        h2 {
-            font-size: 14px;
-            font-weight: bold;
-            margin-top: 18px;
-            margin-bottom: 8px;
-            border-bottom: 1px solid #000;
-            padding-bottom: 3px;
-        }
-        
-        /* Skills Section */
-        .skills-grid {
-            font-size: 11px;
-            margin-bottom: 12px;
-        }
-        
-        .skills-grid p {
-            margin-bottom: 4px;
-        }
-        
-        .skills-grid strong {
-            font-weight: bold;
-        }
-        
-        /* Experience/Projects Section */
-        .experience-item, .project-item {
-            margin-bottom: 14px;
-            page-break-inside: avoid;
-        }
-        
-        .item-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .header-left h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 3px;
+            color: #000;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 13pt;
+            line-height: 1.5;
+        }
+
+        .header-right div {
             margin-bottom: 2px;
         }
-        
-        .item-title {
-            font-size: 12px;
+
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 12pt;
             font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #0066cc;
+            padding-bottom: 2px;
         }
-        
-        .item-date {
-            font-size: 11px;
-            font-style: italic;
+
+        .section-content {
+            font-size: 13pt;
+            margin-left: 10px;
         }
-        
-        .item-subtitle {
-            font-size: 11px;
+
+        .subsection {
+            margin-bottom: 8px;
+        }
+
+        .subsection-title {
+            font-size: 11pt;
             font-weight: bold;
-            margin-bottom: 4px;
-        }
-        
-        .item-description {
-            font-size: 11px;
-            margin-left: 0;
-            padding-left: 15px;
-        }
-        
-        .item-description li {
+            color: #000;
             margin-bottom: 3px;
         }
-        
-        .repo-link {
-            font-size: 10px;
-            color: #0066cc;
-            margin-top: 2px;
-            display: block;
+
+        .subsection-meta {
+            font-size: 11pt;
+            color: #444;
+            font-style: italic;
+            margin-bottom: 3px;
         }
-        
-        /* Certificates */
-        .cert-item {
-            font-size: 11px;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
+
+        .subsection-description {
+            font-size: 13pt;
+            line-height: 1.4;
+            margin-left: 10px;
         }
-        
-        .cert-item strong {
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            margin-left: 10px;
+        }
+
+        .skill-category {
+            font-size: 13pt;
+        }
+
+        .skill-category strong {
             font-weight: bold;
         }
-        
-        /* Education */
-        .education-item {
-            margin-bottom: 12px;
+
+        ul {
+            margin-left: 20px;
+            font-size: 13pt;
         }
-        
-        .education-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+
+        ul li {
             margin-bottom: 2px;
         }
-        
-        .education-title {
-            font-size: 12px;
-            font-weight: bold;
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
         }
-        
-        .education-period {
-            font-size: 11px;
-            font-style: italic;
+
+        .cert-item {
+            margin-bottom: 5px;
+            font-size: 13pt;
         }
-        
-        .education-detail {
-            font-size: 11px;
+
+        .education-item {
+            margin-bottom: 6px;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <div class="header">
-        <h1>ARYAN PRATAP SINGH</h1>
-        <div class="contact-info">
-            Shahjahanpur, Uttar Pradesh<br>
-            +91 9634484148<br>
-            assingh7800@gmail.com<br>
-            linkedin.com/in/aryan-pratap-singh-a7440224b<br>
-            github.com/aryanA0208
+        <div class="header-left">
+            <h1>ARYAN PRATAP SINGH</h1>
+        </div>
+        <div class="header-right">
+            <div>📧 aryanvipinsingh@gmail.com</div>
+            <div>📞 +91 7355733134</div>
+            <div>🔗 <a href="https://www.linkedin.com/in/aryan-pratap-singh-a8aa31250">LinkedIn</a></div>
+            <div>💻 <a href="https://github.com/aryanvipinsingh">GitHub</a></div>
+            <div>📍 Shahjahanpur, Uttar Pradesh</div>
         </div>
     </div>
 
-    <!-- Skills Section -->
-    <h2>SKILLS</h2>
-    <div class="skills-grid">
-        <p><strong>Languages:</strong> HTML, CSS, JavaScript, Java, Python, SQL</p>
-        <p><strong>Frameworks/Libraries:</strong> React, Node.js, Express.js, MongoDB</p>
-        <p><strong>Tools:</strong> Git, GitHub, VS Code, Postman</p>
-        <p><strong>Domain Skills:</strong> Web Development, Responsive Design, RESTful APIs, Problem Solving, Data Structures & Algorithms</p>
-    </div>
-
-    <!-- Internship Section -->
-    <h2>INTERNSHIP</h2>
-    
-    <div class="experience-item">
-        <div class="item-header">
-            <span class="item-title">Web Development Intern</span>
-            <span class="item-date">June 2024 - August 2024</span>
-        </div>
-        <div class="item-subtitle">SkillForge E-Learning Solutions Pvt Ltd</div>
-        <ul class="item-description">
-            <li>Successfully completed comprehensive internship in Web Development, demonstrating dedication, hard work, and intelligence throughout the program.</li>
-            <li>Developed and implemented multiple web projects using HTML, CSS, and JavaScript.</li>
-            <li>Collaborated with team members to deliver high-quality web solutions.</li>
-            <li>Applied best practices in responsive web design and modern web development techniques.</li>
-        </ul>
-    </div>
-
-    <div class="experience-item">
-        <div class="item-header">
-            <span class="item-title">Web Development Intern</span>
-            <span class="item-date">May 2024 - July 2024</span>
-        </div>
-        <div class="item-subtitle">OctaNet Services Pvt. Ltd.</div>
-        <ul class="item-description">
-            <li>Demonstrated exceptional dedication, enthusiasm, and strong willingness to learn throughout the internship.</li>
-            <li>Actively engaged in various web development projects and tasks, exhibiting remarkable skills and professionalism.</li>
-            <li>Worked on frontend development using HTML, CSS, and JavaScript frameworks.</li>
-            <li>Enhanced problem-solving abilities through hands-on project work and real-world challenges.</li>
-        </ul>
-    </div>
-
-    <!-- Projects Section -->
-    <h2>PROJECTS</h2>
-    
-    <div class="project-item">
-        <div class="item-header">
-            <span class="item-title">News Website | HTML, CSS, JavaScript</span>
-            <span class="item-date">July 2024 - August 2024</span>
-        </div>
-        <ul class="item-description">
-            <li>Developed a dynamic news aggregation platform featuring real-time updates and category filtering.</li>
-            <li>Implemented responsive design for seamless news consumption across all devices.</li>
-            <li>Integrated news APIs for fetching and displaying current news articles.</li>
-            <li>Created user-friendly interface with smooth navigation and interactive elements.</li>
-        </ul>
-        <span class="repo-link">Repository Link: https://github.com/aryanA0208/nbc_news</span>
-    </div>
-
-    <div class="project-item">
-        <div class="item-header">
-            <span class="item-title">Amazon Clone | HTML, CSS, JavaScript</span>
-            <span class="item-date">May 2024 - June 2024</span>
-        </div>
-        <ul class="item-description">
-            <li>Built e-commerce platform clone replicating Amazon's core features including product listings and shopping cart.</li>
-            <li>Designed user-friendly interface with product search and filtering capabilities.</li>
-            <li>Implemented local storage for persistent shopping cart data.</li>
-            <li>Applied responsive design principles for optimal viewing across multiple devices.</li>
-        </ul>
-        <span class="repo-link">Repository Link: https://github.com/aryanA0208/Amazon-clone</span>
-    </div>
-
-    <div class="project-item">
-        <div class="item-header">
-            <span class="item-title">To-Do List Application | HTML, CSS, JavaScript</span>
-            <span class="item-date">April 2024 - May 2024</span>
-        </div>
-        <ul class="item-description">
-            <li>Created intuitive task management application with full CRUD functionality (Create, Read, Update, Delete).</li>
-            <li>Implemented local storage for persistent data across browser sessions.</li>
-            <li>Designed clean and minimal user interface for enhanced user experience.</li>
-            <li>Added features like task completion marking and task filtering.</li>
-        </ul>
-        <span class="repo-link">Repository Link: https://github.com/aryanA0208/To-Do-List</span>
-    </div>
-
-    <!-- Certificates Section -->
-    <h2>CERTIFICATES / CERTIFICATIONS</h2>
-    
-    <div class="cert-item">
-        <div>
-            <strong>Web Development Internship Completion</strong> — August 2024<br>
-            SkillForge E-Learning Solutions Pvt Ltd
-        </div>
-    </div>
-    
-    <div class="cert-item">
-        <div>
-            <strong>Web Development Internship</strong> — July 2024<br>
-            OctaNet Services Pvt. Ltd.
-        </div>
-    </div>
-    
-    <div class="cert-item">
-        <div>
-            <strong>WEB-Ranger Participation Certificate</strong> — March 2024<br>
-            Faculty of Computer Applications, Invertis University
-        </div>
-    </div>
-    
-    <div class="cert-item">
-        <div>
-            <strong>PY-WAR Participation Certificate</strong> — February 2024<br>
-            Invertis University
-        </div>
-    </div>
-    
-    <div class="cert-item">
-        <div>
-            <strong>Software Engineering Quiz</strong> — February 2024<br>
-            Faculty of Computer Applications, Invertis University
-        </div>
-    </div>
-    
-    <div class="cert-item">
-        <div>
-            <strong>Introduction to IoT using ThingWorx</strong> — May 2023<br>
-            Dysmech Competency Services
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <div class="section-content">
+            <div class="skills-grid">
+                <div class="skill-category"><strong>Languages:</strong> C, C++, Java, Python, JavaScript</div>
+                <div class="skill-category"><strong>Frameworks:</strong> React.js, Node.js, Express.js</div>
+                <div class="skill-category"><strong>Tools:</strong> Git, GitHub, VS Code, Postman</div>
+                <div class="skill-category"><strong>Database:</strong> MongoDB, MySQL</div>
+            </div>
         </div>
     </div>
 
-    <!-- Education Section -->
-    <h2>EDUCATION</h2>
-    
-    <div class="education-item">
-        <div class="education-header">
-            <span class="education-title">Lovely Professional University</span>
-            <span class="education-period">In Progress</span>
+    <div class="section">
+        <div class="section-title">Internships</div>
+        <div class="section-content">
+            <div class="subsection">
+                <div class="subsection-title">Web Development Intern - Octanet Services Pvt Ltd</div>
+                <div class="subsection-meta">June 2024 - July 2024</div>
+                <div class="subsection-description">Worked on developing and maintaining web applications using modern web technologies. Collaborated with the development team to implement new features and improve user experience.</div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">IoT Intern - Skill-Forge Technology</div>
+                <div class="subsection-meta">May 2024 - June 2024</div>
+                <div class="subsection-description">Gained hands-on experience in IoT systems and sensor integration. Worked on projects involving hardware-software integration and data collection from IoT devices.</div>
+            </div>
         </div>
-        <div class="education-detail">Master of Computer Application (MCA)</div>
-        <div class="education-detail">Phagwara, Punjab</div>
-    </div>
-    
-    <div class="education-item">
-        <div class="education-header">
-            <span class="education-title">Invertis University</span>
-            <span class="education-period">2022 – 2025</span>
-        </div>
-        <div class="education-detail">Bachelor of Computer Application (BCA)</div>
-        <div class="education-detail">Bareilly, Uttar Pradesh</div>
     </div>
 
+    <div class="section">
+        <div class="section-title">Projects</div>
+        <div class="section-content">
+            <div class="subsection">
+                <div class="subsection-title">Amazon Clone</div>
+                <div class="subsection-meta">Technologies: HTML, CSS, JavaScript</div>
+                <div class="subsection-description">Developed a fully functional e-commerce website clone with product listings, shopping cart functionality, and responsive design. Implemented user-friendly interface for seamless shopping experience.</div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">News Website</div>
+                <div class="subsection-meta">Technologies: HTML, CSS, JavaScript, News API</div>
+                <div class="subsection-description">Created a dynamic news aggregation platform that fetches and displays latest news from multiple sources. Integrated REST APIs for real-time news updates with category-based filtering.</div>
+            </div>
+
+            <div class="subsection">
+                <div class="subsection-title">Todo List Application</div>
+                <div class="subsection-meta">Technologies: React.js, Local Storage</div>
+                <div class="subsection-description">Built an interactive task management application with CRUD operations. Features include task prioritization, completion tracking, and persistent data storage using browser local storage.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certificates</div>
+        <div class="section-content">
+            <div class="cert-item">• <strong>Python for Beginners</strong> - Great Learning (Nov 2023)</div>
+            <div class="cert-item">• <strong>Web Development Internship</strong> - Octanet Services Pvt Ltd (July 2024)</div>
+            <div class="cert-item">• <strong>IoT Training</strong> - Skill-Forge Technology (June 2024)</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="section-content">
+            <div class="education-item">
+                <div class="subsection-title">Bachelor of Technology in Computer Science and Engineering</div>
+                <div class="subsection-meta">Invertis University, Bareilly | 2022 - Present</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="subsection-title">Intermediate (Class 12)</div>
+                <div class="subsection-meta">SDMC Girls Inter College, Nigohi, Shahjahanpur | 2022 | 73%</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="subsection-title">High School (Class 10)</div>
+                <div class="subsection-meta">SDMC Girls Inter College, Nigohi, Shahjahanpur | 2020 | 80%</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
